@@ -1,5 +1,11 @@
 # Actions Go Sample Project
 
+## Description
+
+A project to showcase the use of Go to make a simple class "actions.go" that is capable of adding actions in the form of JSON {"action":"jump", "time":100}, {"action":"run", "time":75}, {"action":"jump", "time":200}. 
+
+And then returning the average of each actions time in JSON [{"action":"jump", "avg":150},{"action":"run", "avg":75}].
+
 ## Installation
 
 Make sure to have Go (Golang) downloaded and installed follow instructions at https://golang.org/dl/
