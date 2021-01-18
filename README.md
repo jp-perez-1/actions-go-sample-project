@@ -3,6 +3,7 @@
 ## Installation
 
 Make sure to have Go (Golang) downloaded and installed follow instructions at https://golang.org/dl/
+
 As of the writing of this README go1.15.6 is being used in particular.
 
 ## Structure
@@ -11,7 +12,9 @@ File structure is based on go's suggested structure but only /src has anything f
 In /src there are three folders:
 
 /actions is the package containing the implementation of the solution for the given project
+
 /app is a package with main.go which is a sample use case of the /actions package
+
 /testing is a testing package filled with unit tests to test certain scenarios of use of the /actions package
 
 ## Usage
@@ -24,10 +27,13 @@ This project has a file under /src/actions/actions.go to use it do the following
 5. GetStats(): this returns JSON string in the form of an array [{"action":"jump", "avg":150},{"action":"run", "avg":75}] which takes all prior AddAction commands and averages out the time per action
 
 In /src/app/main.go you can see an example usage of the /src/actions package
+
 To run it go to a terminal and change directory to /src/app feel free to run the code with "go [filename].go" in a terminal
 
 To run tests go to the terminal and change directory to [Path to Project]/src/testing
+
 There run "go test -v" and you'll see all the premade test run successfully. Inspect the code in /src/testing to see all the test scenario attempted
+
 In that same folder you can add you own test go file make sure it ends with _test.go and doesn't duplicate any other test function name
 
 ## Future Considerations / Limitations
