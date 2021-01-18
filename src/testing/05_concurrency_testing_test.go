@@ -21,8 +21,8 @@ func TestConcurrency(t *testing.T) {
 	var wg sync.WaitGroup
 	i := 0
 
-	//Run 100000 times the same loop of the above 5 strings
-	//Every 10 run getStats
+	//Run 100,000 times the same loop of the above 5 strings
+	//Every 10 iterations run getStats
 	//Run the functions concurrently using "go"
 	for i < 100000 {
 		i++
@@ -62,7 +62,7 @@ func TestConcurrency(t *testing.T) {
 	//wait for all processes to finish
 	wg.Wait()
 
-	// Despite all the processes running (all the add action, get stats etc) conncurrently final result should remain as below
+	// Despite all the processes running concurrently the final result should remain as below
 	// If concurrency was not handled the result would likely be random or a crash might happen
 	if actions.GetStats() != "[{\"action\":\"duck\",\"avg\":37.5},{\"action\":\"jump\",\"avg\":150},{\"action\":\"run\",\"avg\":75}]" {
 		t.Errorf("Example failed got %s was expecting [{\"action\":\"duck\",\"avg\":37.5},{\"action\":\"jump\",\"avg\":150},{\"action\":\"run\",\"avg\":75}].", actions.GetStats())

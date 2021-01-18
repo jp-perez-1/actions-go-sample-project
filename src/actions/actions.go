@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"sort"
+	"strings"
 	"sync"
 )
 
@@ -51,9 +52,15 @@ func (a *Actions) AddAction(newActionJSON string) error {
 
 	var newActionInstance ActionInstance
 	// Decode JSON string if it does not decode properly return an error detailing as such.
+	// Check to ensure JSON string has the 'action' and 'time' fields
 	if json.Unmarshal([]byte(newActionJSON), &newActionInstance) != nil {
 		return errors.New("improper JSON format")
+	} else if newActionInstance.Action == "" {
+		return errors.New("imporper JSON format missing action field")
+	} else if newActionInstance.Time == 0 && !strings.Contains(newActionJSON, "\"time\"") {
+		return errors.New("imporper JSON format missing time field")
 	}
+
 	// Lock as data is about to be read and written to
 	a.Lock()
 

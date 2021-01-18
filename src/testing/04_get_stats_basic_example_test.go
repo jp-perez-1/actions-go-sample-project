@@ -16,7 +16,7 @@ func TestGetStatsBasicExample(t *testing.T) {
 	actions.AddAction(s1)
 	actions.AddAction(s2)
 	actions.AddAction(s3)
-	//Should result in the same array with jump and an avg of 150 and run and an avg of 75
+	// Should result in the same array with "jump" and an avg of 150 and "run" and an avg of 75
 	if actions.GetStats() != "[{\"action\":\"jump\",\"avg\":150},{\"action\":\"run\",\"avg\":75}]" {
 		t.Errorf("Example failed got %s was expecting [{\"action\":\"jump\",\"avg\":150},{\"action\":\"run\",\"avg\":75}].", actions.GetStats())
 	}
