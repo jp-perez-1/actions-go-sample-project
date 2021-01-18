@@ -1,4 +1,4 @@
-# JumpCloud Interview Assignment (Backend)
+# Actions Go Sample Project
 
 ## Installation
 
