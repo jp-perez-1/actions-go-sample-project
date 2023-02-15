@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	"../actions"
+	actions "actions/go/src/actions"
 )
 
 // Tests if the add action works, verified by checking GetStats

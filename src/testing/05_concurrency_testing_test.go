@@ -4,7 +4,7 @@ import (
 	"sync"
 	"testing"
 
-	"../actions"
+	actions "actions/go/src/actions"
 )
 
 // Test if concurrency works by running a lot of "go" commands and ensures there is no race condition / crash

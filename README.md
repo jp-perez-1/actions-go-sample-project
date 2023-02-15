@@ -10,7 +10,9 @@ And then returning the average of each actions time in JSON [{"action":"jump", "
 
 Make sure to have Go (Golang) downloaded and installed follow instructions at https://golang.org/dl/
 
-As of the writing of this README Go v1.15.6 is being used. Older or newer version might work however.
+As of the writing of this README Go v1.20.1 is being used. Older or newer version might work however.
+
+(May need to run `go mod init actions/go` in terminal in project root, but not sure...)
 
 ## Structure
 File structure is based on Go's suggested structure but only /src has anything for now

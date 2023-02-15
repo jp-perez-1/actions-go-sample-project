@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	"../actions"
+	actions "actions/go/src/actions"
 )
 
 // Basic example taken from the assignment prompt

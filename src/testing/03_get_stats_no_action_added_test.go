@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	"../actions"
+	actions "actions/go/src/actions"
 )
 
 // Test if GetStats is empty if no add action were ran

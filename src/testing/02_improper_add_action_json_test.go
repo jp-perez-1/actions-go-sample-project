@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	"../actions"
+	actions "actions/go/src/actions"
 )
 
 // Test if AddAction can still proceed after trying to add erroneous JSON strings

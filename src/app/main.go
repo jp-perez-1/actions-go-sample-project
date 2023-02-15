@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	"../actions"
+	actions "actions/go/src/actions"
 )
 
 // This is just a sample use of the package
